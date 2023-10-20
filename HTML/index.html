@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCUEIL</title>
+</head>
+<body>
+    <h1>ACCUEIL</h1>
+    <button onclick="navigateToPage2()">Aller à la page 2</button>
+    <form action="http://127.0.0.1:5000/savedata" method="POST">
+        <input type="text" name="prenom" id="prenom" placeholder="Prénom">
+        <input type="text" name="nom" id="nom" placeholder="Nom">
+        <input type="text" name="mdp" id="mot de passe" placeholder="Mot de passe">
+        <input type="text" name="email" id="email" placeholder="Email">
+        <input type="text" name="tel" id="tel" placeholder="Numéro de téléphone">
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>
