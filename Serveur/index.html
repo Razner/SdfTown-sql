@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACCUEIL</title>
+    <title>Navbar</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>ACCUEIL</h1>
-    <button onclick="navigateToPage2()">Aller à la page 2</button>
-    <script>
-        function navigateToPage2() {
-            window.location.href = "page2.html";
-        }
-    </script>
+    <nav class="navbar">
+        <a class="logo" href="#">sdfTown</a>
+        <div class="nav-links">
+            <ul>
+                <li class="active"><a href="#">Home </a></li>
+                <li><a href="#">Test</a></li>
+                <li><a href="#">Test2</a></li>
+                <li><a href="#">Test3</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+        <img src="../images/menu-btn.png" class="menu-hamburger">
+    </nav>
+    <header></header>
+    
 </body>
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
 </html>
