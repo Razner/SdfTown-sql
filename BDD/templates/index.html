@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>ACCUEIL</h1>
-    <button onclick="navigateToPage2()">Aller à la page 2</button>
-    <form action="http://127.0.0.1:5000/savedata" method="POST">
+    <button onclick="navigateToPage2()">Invitez</button>
+    <form action="/savedata" method="POST">
         <input type="text" name="prenom" id="prenom" placeholder="Prénom">
         <input type="text" name="nom" id="nom" placeholder="Nom">
         <input type="text" name="mdp" id="mot de passe" placeholder="Mot de passe">
@@ -18,7 +18,7 @@
     </form>
     <script>
         function navigateToPage2() {
-            window.location.href = "page2.html";
+            window.location.href = "/page2";
         }
     </script>
 </body>

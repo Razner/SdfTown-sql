@@ -14,7 +14,7 @@ def ajout():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('templates/index.html')
 
 @app.route('/savedata', methods=['POST'])
 def savedata():
@@ -30,6 +30,10 @@ def savedata():
     con.close()
     print(prénom, nom, mdp, email, tel)
     return "Données enregistrées"
+
+@app.route('/page2')
+def page2():
+    return render_template('templates/page2.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
