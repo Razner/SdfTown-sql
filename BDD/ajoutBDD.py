@@ -12,6 +12,10 @@ def ajout():
     con.close()
     return result
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 @app.route('/savedata', methods=['POST'])
 def savedata():
     prénom = request.form.get('prenom')
