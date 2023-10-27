@@ -22,7 +22,7 @@ def savedata():
     tel = request.form.get('tel')
     con = sqlite3.connect(os.path.join(os.getcwd(), 'SdfTown.sqlite'))
     cursor = con.cursor()
-    cursor.execute("INSERT INTO clients ('prénom', 'nom', 'mot de passe', 'email', 'téléphone') VALUES (?, ?, ?, ?, ?)", (prénom, nom, mdp, email, tel))
+    cursor.execute("INSERT INTO clients ('prénom', 'nom', 'mdp', 'email', 'téléphone') VALUES (?, ?, ?, ?, ?)", (prénom, nom, mdp, email, tel))
     con.commit()
     con.close()
     print(select_client())
@@ -37,8 +37,10 @@ def connect():
     mdp = request.form.get('mdp')
     email = request.form.get('email')
     result = select_client_email(email)
-    print(result)
-    return render_template('templates/page2.html')
+    if result[0][0] == mdp:
+        return render_template('templates/page2.html')
+    else:
+        return render_template('templates/home.html')
     
     
 
