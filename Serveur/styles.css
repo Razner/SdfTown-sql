@@ -27,6 +27,25 @@ header {
     align-items: center;
 }
 
+.formulaire {
+    display: block; /* Make sure the form is displayed */
+    margin: 50px auto; /* Adjust the margin for proper positioning */
+    text-align: center; /* Center the form elements */
+}
+
+/* Additional styles for the form elements (you can customize as needed) */
+.formulaire input {
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+.formulaire input[type="submit"] {
+    width: auto;
+    max-width: none;
+}
+
+
 .navbar a {
     color: white;
 }

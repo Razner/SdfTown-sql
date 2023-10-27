@@ -12,7 +12,7 @@
         <div class="nav-links">
             <ul>
                 <li class="active"><a href="#">Home </a></li>
-                <li><a href="#">Test</a></li>
+                <li><a href="a.html">Test</a></li> <!-- Lien vers a.html -->
                 <li><a href="#">Test2</a></li>
                 <li><a href="#">Test3</a></li>
                 <li><a href="#">About us</a></li>
@@ -20,15 +20,15 @@
         </div>
         <img src="../images/menu-btn.png" class="menu-hamburger">
     </nav>
-    <header></header>
     
+    <header></header>   
 </body>
-    <script>
-        const menuHamburger = document.querySelector(".menu-hamburger")
-        const navLinks = document.querySelector(".nav-links")
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
 
-        menuHamburger.addEventListener('click',()=>{
+    menuHamburger.addEventListener('click', () => {
         navLinks.classList.toggle('mobile-menu')
-        })
-    </script>
+    })
+</script>
 </html>

@@ -7,8 +7,7 @@
 </head>
 <body>
     <h1>ACCUEIL</h1>
-    <button onclick="navigateToPage2()">Aller à la page 2</button>
-    <form action="/savedata" method="POST">
+    <form action="a.html" method="POST">
         <input type="text" name="prenom" id="prenom" placeholder="Prénom" required>
         <input type="text" name="nom" id="nom" placeholder="Nom" required>
         <input type="text" name="mdp" id="mot de passe" placeholder="Mot de passe" required>
@@ -16,5 +15,16 @@
         <input type="text" name="tel" id="tel" placeholder="Numéro de téléphone" required>
         <input type="submit" value="Envoyer">
     </form>
+
+    <script>
+        // JavaScript pour effectuer la redirection après la soumission du formulaire
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+            // Effectuer la redirection vers la page d'accueil (index.html)
+            window.location.href = 'index.html';
+        });
+    </script>
+    
 </body>
 </html>
