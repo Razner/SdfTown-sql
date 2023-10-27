@@ -1,6 +1,5 @@
 from selection import *
 from Insertion import *
-import sqlite3
 import os
 from flask import Flask, request, render_template, redirect
 
