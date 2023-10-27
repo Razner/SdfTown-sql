@@ -22,11 +22,13 @@ def savedata():
     email = request.form.get('email')
     tel = request.form.get('tel')
     nouveau_client(prénom,nom,mdp,email,tel)
-    return render_template('templates/page2.html')
+    liste_produits = select_produits()
+    return render_template('templates/page2.html',liste = liste_produits)
 
 @app.route('/page2')
 def page2():
-    return (render_template('templates/page2.html'))
+    liste_produits = select_produits()
+    return (render_template('templates/page2.html',liste = liste_produits))
 
 @app.route('/connect',methods=['POST'])
 def connect():
@@ -34,9 +36,10 @@ def connect():
     email = request.form.get('email')
     result = select_client_email(email)
     if result[0][0] == mdp:
-        return render_template('templates/page2.html')
+        liste_produits = select_produits()
+        return (render_template('templates/page2.html',liste = liste_produits))
     else:
-        return render_template('templates/home.html')
+        return render_template('templates/home.html',message = 'votre mot de passe ou identifiant est incorrect')
     
     
 
