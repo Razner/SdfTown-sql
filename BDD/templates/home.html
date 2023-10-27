@@ -10,11 +10,16 @@
     <form action="/connect" method="POST">
         <input type="email" name="email" id="email" placeholder="Email" required>
         <input type="password" name="mdp" id="mot de passe" placeholder="Mot de passe" required>
+        <input type="submit" value="Envoyer">
     </form>
     <button onclick="navigateToLogin()">Invitez</button>
+    <button onclick="navigateToSignUp()">SignUp</button>
     <script>
+        function navigateToSignUp() {
+            window.location.href = "/SignUp";
+        }
         function navigateToLogin() {
-            window.location.href = "/connect";
+            window.location.href = "/page2";
         }
     </script>
 </body>

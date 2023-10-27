@@ -1,21 +1,17 @@
+from selection import *
 import sqlite3
 import os
 from flask import Flask, request, render_template, redirect
 
 app = Flask(__name__, template_folder=os.getcwd())
 
-def select():
-    con = sqlite3.connect(os.path.join(os.getcwd(), 'SdfTown.sqlite'))
-    cursor = con.cursor()
-    cursor.execute("SELECT * FROM clients")
-    result = cursor.fetchall()
-    print(result)
-    con.close()
-    return result
-
 @app.route('/')
 def index():
     return render_template('templates/home.html')
+
+@app.route('/SignUp')
+def SignUp():
+    return render_template('templates/index.html')
 
 @app.route('/savedata', methods=['POST'])
 def savedata():
@@ -29,15 +25,19 @@ def savedata():
     cursor.execute("INSERT INTO clients ('prénom', 'nom', 'mot de passe', 'email', 'téléphone') VALUES (?, ?, ?, ?, ?)", (prénom, nom, mdp, email, tel))
     con.commit()
     con.close()
-    print(prénom, nom, mdp, email, tel)
+    print(select_client())
     return render_template('templates/page2.html')
 
 @app.route('/page2')
 def page2():
     return (render_template('templates/page2.html'))
 
-@app.route('/connect')
+@app.route('/connect',methods=['POST'])
 def connect():
+    mdp = request.form.get('mdp')
+    email = request.form.get('email')
+    result = select_client_email(email)
+    print(result)
     return render_template('templates/page2.html')
     
     
