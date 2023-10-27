@@ -38,7 +38,7 @@ def connect():
         liste_produits = select_produits()
         return (render_template('templates/page2.html',liste = liste_produits))
     else:
-        return render_template('templates/home.html',message = 'votre mot de passe ou identifiant est incorrect')
+        return render_template('templates/home.html',message = 'votre identifiant ou mot de passe est incorrect')
     
     
 
