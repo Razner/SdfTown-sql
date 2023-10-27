@@ -3,6 +3,7 @@ CREATE TABLE "produits" (
 	"nom"	VARCHAR(50) NOT NULL,
 	"ville"	VARCHAR(50) NOT NULL,
 	"adresse"	VARCHAR(50) NOT NULL,
+	"description"	VARCHAR(50) NOT NULL,
 	"prix"	INTEGER NOT NULL,
 	PRIMARY KEY("idProduit")
 );
