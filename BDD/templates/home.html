@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER</title>
+</head>
+<body>
+    <h1>Identifiez vous </h1>
+    <form action="/connect" method="POST">
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="password" name="mdp" id="mot de passe" placeholder="Mot de passe" required>
+    </form>
+    <button onclick="navigateToLogin()">Invitez</button>
+    <script>
+        function navigateToLogin() {
+            window.location.href = "/connect";
+        }
+    </script>
+</body>
+</html>
