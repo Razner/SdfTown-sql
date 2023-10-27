@@ -6,6 +6,11 @@
     <title>ACCUEIL</title>
 </head>
 <body>
-    <h1>CCZZFJJKHFJKHZJFHJKFH</h1>
+    <h1>Liste des produits</h1>
+    <ul>
+        {% for value in liste_produits %}
+            <li class="card">nom:{{ value.nom }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
