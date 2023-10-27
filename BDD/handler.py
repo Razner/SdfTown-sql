@@ -1,4 +1,5 @@
 from selection import *
+from Insertion import *
 import sqlite3
 import os
 from flask import Flask, request, render_template, redirect
@@ -20,12 +21,7 @@ def savedata():
     mdp = request.form.get('mdp')
     email = request.form.get('email')
     tel = request.form.get('tel')
-    con = sqlite3.connect(os.path.join(os.getcwd(), 'SdfTown.sqlite'))
-    cursor = con.cursor()
-    cursor.execute("INSERT INTO clients ('prénom', 'nom', 'mdp', 'email', 'téléphone') VALUES (?, ?, ?, ?, ?)", (prénom, nom, mdp, email, tel))
-    con.commit()
-    con.close()
-    print(select_client())
+    nouveau_client(prénom,nom,mdp,email,tel)
     return render_template('templates/page2.html')
 
 @app.route('/page2')
