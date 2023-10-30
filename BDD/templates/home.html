@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SdfTown</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="#">sdfTown</a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/BDD/templates/login.html">Login </a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+            <div class="welcome-container">
+                <p class="welcome-text">WELCOME A TOI JEUNE SDF</p>
+            </div>
+        </div>
+        <img src="../static/images/menu-btn.png" class="menu-hamburger">
+    </nav>
+    <header></header>   
+</body>
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu')
+    })
+</script>
+</html>
