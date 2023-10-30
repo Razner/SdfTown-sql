@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTER</title>
+    <title>SdfTown</title>
+    <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
-    <h1>Identifiez vous </h1>
-    <p>{{ message }}</p>
-    <form action="/connect" method="POST">
-        <input type="email" name="email" id="email" placeholder="Email" required>
-        <input type="password" name="mdp" id="mot de passe" placeholder="Mot de passe" required>
-        <input type="submit" value="Envoyer">
-    </form>
-    <button onclick="navigateToLogin()">Invitez</button>
-    <button onclick="navigateToSignUp()">SignUp</button>
-    <script>
-        function navigateToSignUp() {
-            window.location.href = "/SignUp";
-        }
-        function navigateToLogin() {
-            window.location.href = "/page2";
-        }
-    </script>
+    <nav class="navbar">
+        <a class="logo" href="#">sdfTown</a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/BDD/templates/login.html">Login </a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="produits.html">Produits</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+            <div class="welcome-container">
+                <p class="welcome-text">WELCOME A TOI JEUNE SDF</p>
+            </div>
+        </div>
+        <img src="../static/images/menu-btn.png" class="menu-hamburger">
+    </nav>
+    <header></header>   
 </body>
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('mobile-menu')
+    })
+</script>
 </html>

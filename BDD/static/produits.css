@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    padding: 10px;
+    list-style: none;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.description {
+    font-weight: bold;
+}
+
+.prix {
+    font-weight: bold;
+}

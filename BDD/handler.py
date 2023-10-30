@@ -9,9 +9,22 @@ app = Flask(__name__, template_folder=os.getcwd())
 def index():
     return render_template('templates/home.html')
 
-@app.route('/SignUp')
-def SignUp():
-    return render_template('templates/index.html')
+@app.route('/BDD/templates/login.html')
+def login():
+    return render_template('templates/login.html')
+
+@app.route('/register.html')
+def register():
+    return render_template('templates/register.html')
+
+@app.route('/produits.html')
+def produits():
+    liste_produits = select_produits() 
+    return render_template('templates/produits.html', liste=liste_produits)
+
+@app.route('/about.html')
+def about():
+    return render_template('templates/about.html')
 
 @app.route('/savedata', methods=['POST'])
 def savedata():
@@ -24,11 +37,6 @@ def savedata():
     liste_produits = select_produits()
     return render_template('templates/page2.html',liste = liste_produits)
 
-@app.route('/page2')
-def page2():
-    liste_produits = select_produits()
-    return (render_template('templates/page2.html',liste = liste_produits))
-
 @app.route('/connect',methods=['POST'])
 def connect():
     mdp = request.form.get('mdp')
@@ -36,11 +44,9 @@ def connect():
     result = select_client_email(email)
     if result[0][0] == mdp:
         liste_produits = select_produits()
-        return (render_template('templates/page2.html',liste = liste_produits))
+        return (render_template('templates/produits.html',liste = liste_produits))
     else:
         return render_template('templates/home.html',message = 'votre identifiant ou mot de passe est incorrect')
-    
-    
 
 if __name__ == "__main__":
     app.run(debug=True)

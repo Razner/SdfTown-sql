@@ -25,6 +25,6 @@ def select_produits():
     result = cursor.fetchall()
     con.close()
     for i in result:
-        produit = {"nom":i[1],"ville":i[2],"adresse":i[3],"prix":i[4]}
+        produit = {"nom":i[1],"ville":i[2],"adresse":i[3],"description":i[4],"prix":i[5]}
         liste_produit.append(produit)
     return liste_produit
