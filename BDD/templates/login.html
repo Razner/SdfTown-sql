@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTER</title>
+    <title>Se connecter</title>
     <link rel="stylesheet" href="../static/login.css">
 </head>
 <body>
     <h1>Identifiez vous </h1>
-    <p>{{ message }}</p>
     <form action="/connect" method="POST">
         <input type="email" name="email" id="email" placeholder="Email" required>
         <input type="password" name="mdp" id="mot de passe" placeholder="Mot de passe" required>
@@ -18,10 +17,10 @@
     <button onclick="navigateToSignUp()">SignUp</button>
     <script>
         function navigateToSignUp() {
-            window.location.href = "/SignUp";
+            window.location.href = "/register.html";
         }
         function navigateToLogin() {
-            window.location.href = "/page2";
+            window.location.href = "/produits.html";
         }
     </script>
 </body>

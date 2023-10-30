@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='page2.css') }}">
-    <title>ACCUEIL</title>
+    <link rel="stylesheet" href="../static/produits.css">
+    <title>Nos Produits</title>
 </head>
 <body>
+<form action="/produits" method="GET">
     <h1>Liste des Produits</h1>
-<ul>
-    {% for produit in liste %}
-        <li>
-            <h2>{{ produit.nom }}</h2>
-            <p>Description : {{ produit.description }}</p>
-            <p>Prix : {{ produit.prix }} EUR</p>
-        </li>
-    {% endfor %}
-</ul>
+    <ul>
+        {% for produit in liste %}
+            <li>
+                <h2>{{ produit.nom }}</h2>
+                <p class="description">Description : {{ produit.description }} </p>
+                <p class="prix">Prix : {{ produit.prix }} €</p>
+            </li>
+        {% endfor %}
+    </ul>
+</form>
 </body>
 </html>

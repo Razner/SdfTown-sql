@@ -34,9 +34,6 @@ header {
     text-overflow: ellipsis;
 }
 
-
-
-
 .navbar {
     position: absolute;
     padding: 50px;
@@ -48,12 +45,11 @@ header {
 }
 
 .formulaire {
-    display: block; /* Make sure the form is displayed */
-    margin: 50px auto; /* Adjust the margin for proper positioning */
-    text-align: center; /* Center the form elements */
+    display: block; 
+    margin: 50px auto; 
+    text-align: center; 
 }
 
-/* Additional styles for the form elements (you can customize as needed) */
 .formulaire input {
     margin: 10px;
     padding: 5px;
@@ -64,7 +60,6 @@ header {
     width: auto;
     max-width: none;
 }
-
 
 .navbar a {
     color: white;
@@ -83,9 +78,8 @@ header {
     margin: 0 25px;
 }
 
-.navbar .nav-links ul li.active a {
+a:hover{
     color: red;
-    font-weight: 600;
 }
 
 .navbar .menu-hamburger {
@@ -95,8 +89,6 @@ header {
     right: 30px;
     width: 35px;
 }
-
-
 
 @media screen and (max-width: 900px) {
     .navbar {

@@ -18,7 +18,7 @@ h1 {
 
 .container {
     display: flex;
-    justify-content: space-around; /* Aligne les éléments horizontalement */
+    justify-content: space-around; 
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -26,13 +26,13 @@ h1 {
 }
 
 .image-container {
-    text-align: center; /* Centre le texte */
+    text-align: center;
 }
 
 .image {
-    width: 200px; /* Réglez la largeur à la taille souhaitée */
+    width: 200px;
     height: auto;
-    display: block; /* Supprime les marges inférieures par défaut des images */
+    display: block; 
 }
 
 .text {
